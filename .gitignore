@@ -1,2 +1,2 @@
-# не обрабатывать папку node_modules
+# ignore node_modules folder
 node_modules/
