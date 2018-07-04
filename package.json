@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "browser-sync": "^2.24.5",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1"
   },

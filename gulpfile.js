@@ -2,8 +2,10 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create();
 
+const pathToSass = 'project/sass/*.scss'
+
 gulp.task ('sass', function () {
-    return gulp.src('project/*.scss')
+    return gulp.src(pathToSass)
         .pipe(sass())
         .pipe(gulp.dest('project/css'))
         .pipe(browserSync.reload({
@@ -19,8 +21,8 @@ gulp.task('reload', function() {
     })
 })
 
-gulp.task('sass:watch' , function() {
-    gulp.watch('project/*.scss', ['sass']);
+gulp.task('watch' , function() {
+    gulp.watch(pathToSass, ['sass']);
 });
 
 gulp.task('default', ['watch']);
