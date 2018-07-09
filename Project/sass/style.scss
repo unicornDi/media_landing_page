@@ -1,6 +1,62 @@
+$main-color: #f6f6f6;
+$dark-grey: #424146;
 body {
+    margin: 0;
+}
+
+.main-container {
     display: flex;
-    box-shadow: 10px 10px 10px blue;
-    background-color: hotpink;
-    flex: 0%;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background: $main-color;
+    height: 160px;
+    align-items: center;
+    flex-basis: 100%;
+        
+        img {
+            height: 80%;
+            margin-left: 5%;
+        }
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 80%;
+    justify-content: flex-end;
+
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content: space-evenly;
+}
+
+.header_banner {
+    height: 150px;
+         img {
+            width: 100%;
+         }       
+    .project {
+        position: relative;
+        width: 200px;
+        height: 50px;
+        background-color: $dark-grey;
+        left: 120px; 
+        top: -105px;
+    }
+        .project-button {
+            display: flex;
+        }
+            p {
+                margin-left: 15px;
+                color: yellow;
+            }
 }
