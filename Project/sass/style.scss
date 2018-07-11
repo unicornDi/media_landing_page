@@ -1,6 +1,7 @@
 $main-color: #f6f6f6;
 $dark-grey: #424146;
 $yellow: #ffea00;
+$border: #cdcdcd;
 body {
     margin: 0;
     background-color: $main-color;
@@ -67,7 +68,7 @@ nav {
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
-    flex-wrap: wrap;
+    height: 900px;
 }
 
 .main-block_firts-part {
@@ -79,16 +80,22 @@ nav {
             background: $dark-grey;
             width: 900px;
             height: 600px;
+            margin-left: 15px;
         }
 
         .project-description {
             width: 900px;
             height: 620px;
+
                 div {
                     height: 35px;
                     width: 220px;
                     background-color: $dark-grey;
                     color: $yellow;
+                    margin-left: 15px;
+                }
+                
+                .project-description-text {
                     margin-left: 15px;
                 }
         }
@@ -103,7 +110,6 @@ aside {
             width: 80%;
             height: 400px;
             background: $dark-grey;
-            align-self: center;
             margin-left: 35px;
 
                 p {
@@ -113,6 +119,63 @@ aside {
                 ul {
                     list-style-type: none;
                     padding-top: 5px;
+                }
+        }
+
+        .popular-posts {
+            width: 80%;
+            height: 420px;
+            background: $dark-grey;
+            margin-left: 35px;
+            margin-top: 30px;
+
+            p {
+                color: $yellow;
+                margin-left: 20px;
+        }
+    }
+
+        .tags {
+            width: 80%;
+            height: 150px;
+            background: $dark-grey;
+            margin-left: 35px;
+            margin-top: 30px;
+
+                p {
+                    color: $yellow;
+                    margin-left: 20px;
+                }
+
+            
+        }
+}
+
+.recent-projects {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    
+        .recent-projects-header {
+            height: 30px;
+            width: 190px;
+            background-color: $dark-grey;
+            color: $yellow;
+            margin-left: 15px;
+        }
+
+        .recent-projects-images {
+            display: flex;
+            flex-direction: row;
+            margin-top: 15px;
+            justify-content: space-around;
+
+                .image-box {
+                    width: 300px;
+
+                    img {
+                        max-width: 100%;
+                    }
                 }
         }
 }
