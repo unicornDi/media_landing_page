@@ -1,7 +1,9 @@
 $main-color: #f6f6f6;
 $dark-grey: #424146;
+$yellow: #ffea00;
 body {
     margin: 0;
+    background-color: $main-color;
 }
 
 .main-container {
@@ -49,7 +51,7 @@ nav {
         width: 200px;
         height: 50px;
         background-color: $dark-grey;
-        left: 120px; 
+        left: 75px; 
         top: -105px;
     }
         .project-button {
@@ -57,6 +59,60 @@ nav {
         }
             p {
                 margin-left: 15px;
-                color: yellow;
+                color: $yellow;
             }
+}
+
+.main-block {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.main-block_firts-part {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+
+        .gallery {
+            background: $dark-grey;
+            width: 900px;
+            height: 600px;
+        }
+
+        .project-description {
+            width: 900px;
+            height: 620px;
+                div {
+                    height: 35px;
+                    width: 220px;
+                    background-color: $dark-grey;
+                    color: $yellow;
+                    margin-left: 15px;
+                }
+        }
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+        .project-details {
+            width: 80%;
+            height: 400px;
+            background: $dark-grey;
+            align-self: center;
+            margin-left: 35px;
+
+                p {
+                    color: $yellow;
+                    margin-left: 20px;
+                }
+                ul {
+                    list-style-type: none;
+                    padding-top: 5px;
+                }
+        }
 }
