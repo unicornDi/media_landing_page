@@ -1,82 +1,100 @@
+// colors
 $main-color: #f6f6f6;
 $dark-grey: #424146;
 $yellow: #ffea00;
 $border: #cdcdcd;
+
+// flex-basis
+$percent-100: 100%;
+$percent-80: 80%;
+$percent-60: 60%;
+$percent-30: 30%;
+$percent-50: 50%;
+
+//mixins
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 body {
     margin: 0;
     background-color: $main-color;
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
+    @include flex-column;
+    width: $percent-100;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
+    flex-basis: $percent-100;
     background: $main-color;
     height: 160px;
     align-items: center;
-    flex-basis: 100%;
-        
+    
         img {
-            height: 80%;
+            height: $percent-80;
             margin-left: 5%;
         }
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 80%;
+    @include flex-row ;
+    width: $percent-80;
     justify-content: flex-end;
 
 }
 
 .navigation {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 50%;
+    @include flex-row;
+    flex-basis: $percent-50;
     justify-content: space-evenly;
+
+        
 }
 
 .header_banner {
+    @include flex-row;
     height: 150px;
-         img {
-            width: 100%;
-         }       
-    .project {
-        position: relative;
-        width: 200px;
-        height: 50px;
-        background-color: $dark-grey;
-        left: 75px; 
-        top: -105px;
-    }
+    width: 100%;
+    align-items: center;
+    background-image: url(/images/slider_bg.png);
+
         .project-button {
-            display: flex;
+            flex-basis: 170px;
+            background: $dark-grey;
+            height: 50px;
+            margin-left: 50px;
+            color: $yellow;
+                 
+                p {
+                    margin-left: 10px;
+                }
+
         }
-            p {
-                margin-left: 15px;
-                color: $yellow;
-            }
+    
 }
 
 .main-block {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 100%;
-    height: 900px;
+    @include flex-row;
+    flex-basis: $percent-100;
+    height: 1000px;
+    margin-top: 40px;
 }
 
 .main-block_firts-part {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 60%;
+    @include flex-column;
+    flex-basis: $percent-60;
 
         .gallery {
+            display: flex;
             background: $dark-grey;
             width: 900px;
             height: 600px;
@@ -84,7 +102,7 @@ nav {
         }
 
         .project-description {
-            width: 900px;
+            flex-basis: 90%;
             height: 620px;
 
                 div {
@@ -102,9 +120,8 @@ nav {
 }
 
 aside {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
+    @include flex-column;
+    flex-basis: $percent-30;
 
         .project-details {
             width: 80%;
@@ -152,8 +169,8 @@ aside {
 }
 
 .recent-projects {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
+    width: $percent-100;
     height: 500px;
     
         .recent-projects-header {
@@ -166,7 +183,6 @@ aside {
 
         .recent-projects-images {
             display: flex;
-            flex-direction: row;
             margin-top: 15px;
             justify-content: space-around;
 
