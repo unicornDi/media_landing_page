@@ -7,6 +7,7 @@ $border: #cdcdcd;
 // flex-basis
 $percent-100: 100%;
 $percent-80: 80%;
+$percent-70: 70%;
 $percent-60: 60%;
 $percent-30: 30%;
 $percent-50: 50%;
@@ -57,6 +58,14 @@ nav {
     flex-basis: $percent-50;
     justify-content: space-evenly;
 
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        #about-us-nav-item {
+            min-width: 62px;
+        }
+
         
 }
 
@@ -85,27 +94,25 @@ nav {
 .main-block {
     @include flex-row;
     flex-basis: $percent-100;
-    height: 1000px;
     margin-top: 40px;
 }
 
 .main-block_firts-part {
     @include flex-column;
-    flex-basis: $percent-60;
+    flex-basis: $percent-70;
 
         .gallery {
             display: flex;
             background: $dark-grey;
-            width: 900px;
-            height: 600px;
+            width: 100%;
+            height: 670px;
             margin-left: 15px;
         }
 
         .project-description {
-            flex-basis: 90%;
-            height: 620px;
-
-                div {
+            width: 100%;
+        
+                p {
                     height: 35px;
                     width: 220px;
                     background-color: $dark-grey;
@@ -115,6 +122,8 @@ nav {
                 
                 .project-description-text {
                     margin-left: 15px;
+                    display: flex;
+                    
                 }
         }
 }
@@ -125,7 +134,7 @@ aside {
 
         .project-details {
             width: 80%;
-            height: 400px;
+            height: 370px;
             background: $dark-grey;
             margin-left: 35px;
 
@@ -141,7 +150,7 @@ aside {
 
         .popular-posts {
             width: 80%;
-            height: 420px;
+            height: 400px;
             background: $dark-grey;
             margin-left: 35px;
             margin-top: 30px;
@@ -154,7 +163,7 @@ aside {
 
         .tags {
             width: 80%;
-            height: 150px;
+            height: 130px;
             background: $dark-grey;
             margin-left: 35px;
             margin-top: 30px;
@@ -172,6 +181,7 @@ aside {
     @include flex-column;
     width: $percent-100;
     height: 500px;
+    margin-top: 30px;
     
         .recent-projects-header {
             height: 30px;
