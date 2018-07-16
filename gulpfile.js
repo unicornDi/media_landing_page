@@ -26,6 +26,16 @@ gulp.task ('sass', function () {
         .pipe(gulp.dest('project/css'))
 });
 
+gulp.task('fonts', function() {
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+      .pipe(gulp.dest('public/fonts'))
+  })
+
+
+
+
+// watcher
+
 gulp.task('reload', function() {
     browserSync.init({
         server: {
@@ -34,7 +44,7 @@ gulp.task('reload', function() {
     })
 })
 
-gulp.task('watch', ['sass', 'postcss', 'reload'], function() {
+gulp.task('watch', ['sass', 'postcss', 'fonts', 'reload'], function() {
     gulp.watch(pathToSass, ['sass', 'postcss']);
     gulp.watch('project/index.html', browserSync.reload)
 });

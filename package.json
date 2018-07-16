@@ -8,7 +8,9 @@
   },
   "author": "Dasha",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.0"
+  },
   "dependencies": {
     "autoprefixer": "^8.6.5",
     "browser-sync": "^2.24.5",

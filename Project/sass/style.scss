@@ -26,6 +26,7 @@ $percent-50: 50%;
 body {
     margin: 0;
     background-color: $main-color;
+    min-width: 1010px;
 }
 
 .main-container {
@@ -35,12 +36,13 @@ body {
 
 header {
     @include flex-row;
-    flex-basis: $percent-100;
+    width: $percent-100;
     background: $main-color;
     height: 160px;
     align-items: center;
-    
-        img {
+    justify-content: space-between;
+
+        .header-logo {
             height: $percent-80;
             margin-left: 5%;
         }
@@ -48,8 +50,8 @@ header {
 
 nav {
     @include flex-row ;
-    width: $percent-80;
     justify-content: flex-end;
+    margin-right: 5%;
 
 }
 
@@ -57,17 +59,19 @@ nav {
     @include flex-row;
     flex-basis: $percent-50;
     justify-content: space-evenly;
+    
 
         .nav-item {
-            margin: 0 10px;
+            margin: 0 25px;
         }
 
         #about-us-nav-item {
             min-width: 62px;
+            margin-right: 35px;
         }
-
         
 }
+
 
 .header_banner {
     @include flex-row;
@@ -180,7 +184,6 @@ aside {
 .recent-projects {
     @include flex-column;
     width: $percent-100;
-    height: 500px;
     margin-top: 30px;
     
         .recent-projects-header {
@@ -194,14 +197,75 @@ aside {
         .recent-projects-images {
             display: flex;
             margin-top: 15px;
-            justify-content: space-around;
 
                 .image-box {
-                    width: 300px;
+                    width: 250px;
+                    padding: 15px;
 
                     img {
                         max-width: 100%;
                     }
+                }
+        }
+}
+
+footer {
+
+    @include flex-row;
+    width: $percent-100;
+    background: $dark-grey;
+    margin-top: 50px;
+
+
+        .about-us {
+            @include flex-column;
+            color: white;
+            margin-left: 90px;
+            flex-basis: 500px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100px; 
+            height: 40px;
+            background: black;
+            color: white;
+            border: none;
+            box-shadow: 0 2px $yellow;
+        }
+
+        .photo-stream {
+            
+            .photo-stream-gallery {
+                @include flex-row;
+                flex-wrap: wrap;
+
+                    img {
+                        padding: 3px;
+                    }
+            }
+        }
+
+        .latest-tweets {
+            @include flex-row;
+            
+                .tweets {
+                    @include flex-column;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 362px;
+
+                    .fab {
+                        color: white;
+                      }
+                }
+
+                .tweets-text {
+                    @include flex-column;
+                    justify-content: space-around;
+                    color: white;
+                    height: 362px;
+                    margin-left: 20px;
                 }
         }
 }
