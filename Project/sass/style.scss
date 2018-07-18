@@ -215,13 +215,13 @@ footer {
     width: $percent-100;
     background: $dark-grey;
     margin-top: 50px;
+    min-width: 1010px;
 
 
         .about-us {
             @include flex-column;
             color: white;
-            margin-left: 90px;
-            flex-basis: 500px;
+            margin-left: 70px;
         }
 
         button {
@@ -245,15 +245,19 @@ footer {
                     }
             }
         }
-
+        .tweets-block {
+            margin-left: 10px;
+            
+        }
         .latest-tweets {
             @include flex-row;
+           
             
                 .tweets {
                     @include flex-column;
                     justify-content: space-around;
                     align-items: center;
-                    height: 362px;
+                    // height: 362px;
 
                     .fab {
                         color: white;
@@ -267,5 +271,37 @@ footer {
                     height: 362px;
                     margin-left: 20px;
                 }
+        }
+
+        .social-connecting {
+            @include flex-row;
+            margin-top: 10px;
+            min-width: 450px;
+
+                .soc-net-icons {
+                    margin-left: 10px;
+                    // min-width: 283px;
+                }
+        }
+
+    .contact-info-block {
+        @include flex-column;
+        margin-left: 60px;
+            
+            .contact-info {
+                height: 200px;
+                @include flex-row;
+
+                .contact-info-icons {
+                    @include flex-column;
+                    justify-content: space-around;
+                }
+
+                .contact-info-text {
+                    margin-left: 10px;
+                    @include flex-column;
+                    justify-content: space-around;
+                }
+            }
         }
 }
