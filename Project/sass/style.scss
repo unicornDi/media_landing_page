@@ -29,7 +29,7 @@ $percent-50: 50%;
 body {
     margin: 0;
     background-color: $main-color;
-    min-width: 1010px;
+    min-width: 500px;
 }
 
 .main-container {
@@ -109,11 +109,22 @@ nav {
     flex-basis: $percent-70;
 
         .gallery {
-            display: flex;
+            @include flex-row;
+            flex-wrap: wrap;
             background: $dark-grey;
             width: 100%;
-            height: 670px;
             margin-left: 15px;
+            align-items: center;
+            justify-content: center;
+
+                .gallery-img {
+                    height: 280px;
+                    width: 280px;
+                    padding: 10px;
+                        img {
+                            width: 100%;
+                        }
+                }
         }
 
         .project-description {
@@ -139,7 +150,8 @@ aside {
     @include flex-column;
     flex-basis: $percent-30;
 
-        .project-details {
+        .project-details-block {
+            @include flex-column;
             width: 80%;
             height: 370px;
             background: $dark-grey;
@@ -149,10 +161,38 @@ aside {
                     color: $yellow;
                     margin-left: 20px;
                 }
-                ul {
-                    list-style-type: none;
-                    padding-top: 5px;
-                }
+                .project-details {
+                    @include flex-row;
+                    height: 80%;
+                    justify-content: space-around;
+                    margin: 0 5%;
+                    min-width: 231.52px;
+                    width: 100%;
+
+                    .arrows {
+                    @include flex-column;
+                    justify-content: space-around;
+                    margin: 0 5px;
+
+
+                        .fa-angle-right {
+                            @include flex-row;
+                            justify-content: center;
+                            align-items: center;
+                            background: $yellow;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }  
+                    
+                    .project-details-text {
+                        @include flex-column;
+                        justify-content: space-around;
+                        margin-right: 35px;
+                        min-width: 231.52px;
+                    }
+                } 
+            }
         }
 
         .popular-posts {
@@ -182,7 +222,7 @@ aside {
 
             
         }
-}
+
 
 .recent-projects {
     @include flex-column;
