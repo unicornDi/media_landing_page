@@ -195,9 +195,10 @@ aside {
             }
         }
 
-        .popular-posts {
+        .popular-posts-block {
+            @include flex-column;
             width: 80%;
-            height: 400px;
+            height: 420px;
             background: $dark-grey;
             margin-left: 35px;
             margin-top: 30px;
@@ -205,10 +206,37 @@ aside {
             p {
                 color: $yellow;
                 margin-left: 20px;
-        }
+            }
+
+            .popular-posts-container {
+                @include flex-column;
+                justify-content: space-around;
+                height: $percent-100;
+                
+                .popular-post {
+                    @include flex-row;
+                    height: $percent-100;
+                    justify-content: space-around;
+
+                        .popular-post-text {
+                            margin-left: 10px;
+                            flex-basis: 50%;
+                            
+                        }
+
+                        .popular-post-img {
+                            flex-basis: 90px;
+                            height: 60px;
+
+                                img {
+                                    width: $percent-100;
+                                }
+                        }
+                }
+            }
     }
 
-        .tags {
+        .tags-container {
             width: 80%;
             height: 130px;
             background: $dark-grey;
@@ -218,6 +246,31 @@ aside {
                 p {
                     color: $yellow;
                     margin-left: 20px;
+                }
+
+                .tags-block {
+                    @include flex-column;
+                    width: 100%;
+                    height: 70%;
+
+
+                    .tags-row {
+                        @include flex-row;
+                        justify-content: space-around;
+                        margin-top: 5px;
+                    }
+                    .tags-third-row {
+                        @include flex-row;
+                        margin-top: 5px;
+                        width: 226px;
+                        justify-content: space-around;
+                    }
+                    
+                        .tag {
+                            background: $yellow;
+                            font-size: 15px;
+                        
+                        }
                 }
 
             
