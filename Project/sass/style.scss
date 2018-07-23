@@ -156,6 +156,7 @@ aside {
             height: 370px;
             background: $dark-grey;
             margin-left: 35px;
+            min-width: 320px;
 
                 p {
                     color: $yellow;
@@ -202,7 +203,7 @@ aside {
             background: $dark-grey;
             margin-left: 35px;
             margin-top: 30px;
-
+            min-width: 320px;
             p {
                 color: $yellow;
                 margin-left: 20px;
@@ -237,11 +238,12 @@ aside {
     }
 
         .tags-container {
-            width: 80%;
+            width: $percent-80;
             height: 130px;
             background: $dark-grey;
             margin-left: 35px;
             margin-top: 30px;
+            min-width: 320px;
 
                 p {
                     color: $yellow;
@@ -262,7 +264,7 @@ aside {
                     .tags-third-row {
                         @include flex-row;
                         margin-top: 5px;
-                        width: 226px;
+                        width: 220px;
                         justify-content: space-around;
                     }
                     
@@ -304,7 +306,6 @@ aside {
                 }
         }
 }
-
 .bottom-block {
 
     @include flex-row;
@@ -312,6 +313,7 @@ aside {
     background: $dark-grey;
     margin-top: 50px;
     min-width: 1010px;
+    justify-content: space-around;
 
         .about-us {
             @include flex-column;
@@ -343,8 +345,7 @@ aside {
         }
     } 
 
-        .tweets-block {
-            // flex-basis: 420px; 
+        .tweets-block { 
             font-size: 13px;
             margin-left: 40px;
         
@@ -406,6 +407,14 @@ aside {
                 }
             }
         }
+
+        input {
+           background: $dark-grey;
+           border: none;
+           box-shadow: 0 2px $yellow;
+           outline: none;
+           caret-color: white;
+        }
 }
 
 footer {
@@ -427,11 +436,14 @@ footer {
             color: white;
             justify-content: flex-end;
             width: 800px;
+            margin-left: 20px;
+            min-width: 428px;
 
                 div {
                     @include flex-row;
                     justify-content: space-around;
                     flex-basis: 600px;
+                
                     
                 }
             
