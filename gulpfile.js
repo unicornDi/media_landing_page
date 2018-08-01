@@ -18,21 +18,13 @@ gulp.task('postcss', ['sass'], function () {
           }));
 });
 
-const pathToSass = 'project/sass/*.scss'
+const pathToSass = 'project/sass/style.scss'
 
 gulp.task ('sass', function () {
     return gulp.src(pathToSass)
         .pipe(sass())
         .pipe(gulp.dest('project/css'))
 });
-
-gulp.task('fonts', function() {
-    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
-      .pipe(gulp.dest('public/fonts'))
-  })
-
-
-
 
 // watcher
 
@@ -44,7 +36,7 @@ gulp.task('reload', function() {
     })
 })
 
-gulp.task('watch', ['sass', 'postcss', 'fonts', 'reload'], function() {
+gulp.task('watch', ['sass', 'postcss', 'reload'], function() {
     gulp.watch(pathToSass, ['sass', 'postcss']);
     gulp.watch('project/index.html', browserSync.reload)
 });

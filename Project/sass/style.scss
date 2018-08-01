@@ -1,30 +1,4 @@
-// colors
-$main-color: #f6f6f6;
-$dark-grey: #424146;
-$yellow: #ffea00;
-$border: #cdcdcd;
-
-// font size
-$footer-size: 13px;
-
-// flex-basis
-$percent-100: 100%;
-$percent-80: 80%;
-$percent-70: 70%;
-$percent-60: 60%;
-$percent-30: 30%;
-$percent-50: 50%;
-
-//mixins
-@mixin flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin flex-row {
-    display: flex;
-    flex-direction: row;
-}
+@import './var.scss';
 
 body {
     margin: 0;
@@ -66,10 +40,15 @@ nav {
 
         .nav-item {
             margin: 0 25px;
+            text-transform: uppercase;
+        }
+
+        .nav-item:hover {
+            background: $yellow;
         }
 
         #about-us-nav-item {
-            min-width: 62px;
+            min-width: 65px;
             margin-right: 35px;
         }
         
@@ -107,6 +86,7 @@ nav {
 .main-block_firts-part {
     @include flex-column;
     flex-basis: $percent-70;
+    
 
         .gallery {
             @include flex-row;
@@ -121,10 +101,22 @@ nav {
                     height: 280px;
                     width: 280px;
                     padding: 10px;
+
+                .gallery-img:hover {
+                    transform: scale(1.5);
+                        }    
                         img {
                             width: 100%;
+                            transition: transform .5s;
+
+                        }
+                        img:hover {
+                            transform: scale(1.5);
+                            
                         }
                 }
+
+                
         }
 
         .project-description {
@@ -149,6 +141,7 @@ nav {
 aside {
     @include flex-column;
     flex-basis: $percent-30;
+    margin-right: auto;
 
         .project-details-block {
             @include flex-column;
@@ -370,6 +363,7 @@ aside {
                         justify-content: space-around;
                         color: white;
                         margin-left: 20px;
+                        line-height: 20px;
                         
                     }
             }
@@ -415,6 +409,45 @@ aside {
            outline: none;
            caret-color: white;
         }
+}
+@media only screen and (max-width: 1080px) {
+   
+    .bottom-block {
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+
+            .about-us {
+                align-items: center;
+                text-align: center;
+
+                .photo-stream {
+                    width: 408px;
+                }
+            }
+
+            .tweets-block {  
+                justify-content: center;
+                margin-top: 40px;
+
+                    h4 {
+                        text-align: center;
+                    }
+                        span {
+                            padding-bottom: 40px;
+                        }
+                        .fab {
+                            padding-bottom: 40px;
+                        }
+
+                .social-connecting {
+                    justify-content: center;
+                }        
+            }
+        .contact-info-block {
+            align-items: center;
+        }    
+    }
 }
 
 footer {

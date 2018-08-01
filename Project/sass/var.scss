@@ -1,0 +1,27 @@
+// colors
+$main-color: #f6f6f6;
+$dark-grey: #424146;
+$yellow: #ffea00;
+$border: #cdcdcd;
+
+// font size
+$footer-size: 13px;
+
+// flex-basis
+$percent-100: 100%;
+$percent-80: 80%;
+$percent-70: 70%;
+$percent-60: 60%;
+$percent-30: 30%;
+$percent-50: 50%;
+
+//mixins
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
