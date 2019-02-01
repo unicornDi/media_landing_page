@@ -1,0 +1,30 @@
+// nav {
+//     @include flex-row;
+//     justify-content: flex-end;
+//     margin-right: 5%;
+// }
+.nav-list {
+    @include flex-row;
+    list-style: none;
+    margin-right: 5%;
+}
+
+// .navigation {
+//     @include flex-row;
+//     flex-basis: $percent-50;
+//     justify-content: space-evenly;
+    
+//         .nav-item {
+//             margin: 0 25px;
+//             text-transform: uppercase;
+//         }
+
+//         .nav-item:hover {
+//             background: $yellow;
+//         }
+
+//         #about-us-nav-item {
+//             min-width: 65px;
+//             margin-right: 35px;
+//         }    
+// }

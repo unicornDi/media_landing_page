@@ -20,6 +20,7 @@ gulp.task('postcss', ['sass'], function () {
 
 const pathToSass = 'project/sass/style.scss'
 
+
 gulp.task ('sass', function () {
     return gulp.src(pathToSass)
         .pipe(sass())
