@@ -1,5 +1,7 @@
 @import './var.scss';
 @import './nav.scss';
+@import './yellow-header.scss';
+@import './aside-header.scss';
 
 body {
     margin: 0;
@@ -25,32 +27,6 @@ header {
             margin-left: 5%;
         }
 }
-
-// nav {
-//     @include flex-row ;
-//     justify-content: flex-end;
-//     margin-right: 5%;
-// }
-
-// .navigation {
-//     @include flex-row;
-//     flex-basis: $percent-50;
-//     justify-content: space-evenly;
-    
-//         .nav-item {
-//             margin: 0 25px;
-//             text-transform: uppercase;
-//         }
-
-//         .nav-item:hover {
-//             background: $yellow;
-//         }
-
-//         #about-us-nav-item {
-//             min-width: 65px;
-//             margin-right: 35px;
-//         }    
-// }
 
 .header_banner {
     @include flex-row;
@@ -113,14 +89,6 @@ header {
 
         .project-description {
             width: 100%;
-        
-                p {
-                    height: 35px;
-                    width: 220px;
-                    background-color: $dark-grey;
-                    color: $yellow;
-                    margin-left: 15px;
-                }
                 
                 .project-description-text {
                     margin-left: 15px;
@@ -143,10 +111,6 @@ aside {
             margin-left: 35px;
             min-width: 320px;
 
-                p {
-                    color: $yellow;
-                    margin-left: 20px;
-                }
                 .project-details {
                     @include flex-row;
                     height: 80%;
@@ -189,10 +153,6 @@ aside {
             margin-left: 35px;
             margin-top: 30px;
             min-width: 320px;
-            p {
-                color: $yellow;
-                margin-left: 20px;
-            }
 
             .popular-posts-container {
                 @include flex-column;
@@ -229,52 +189,37 @@ aside {
             margin-top: 30px;
             min-width: 320px;
 
-                p {
-                    color: $yellow;
-                    margin-left: 20px;
+            .tags-block {
+                @include flex-column;
+                width: 100%;
+                height: 70%;
+
+                .tags-row {
+                    @include flex-row;
+                    justify-content: space-around;
+                    margin-top: 5px;
                 }
 
-                .tags-block {
-                    @include flex-column;
-                    width: 100%;
-                    height: 70%;
-
-
-                    .tags-row {
-                        @include flex-row;
-                        justify-content: space-around;
-                        margin-top: 5px;
-                    }
-                    .tags-third-row {
-                        @include flex-row;
-                        margin-top: 5px;
-                        width: 220px;
-                        justify-content: space-around;
-                    }
+                .tags-third-row {
+                    @include flex-row;
+                    margin-top: 5px;
+                    width: 220px;
+                    justify-content: space-around;
+                }
                     
-                        .tag {
-                            background: $yellow;
-                            font-size: 15px;
-                        
-                        }
+                .tag {
+                    background: $yellow;
+                    font-size: 15px;
+                
                 }
-
-            
-        }
+        }    
+    }
 
 
 .recent-projects {
     @include flex-column;
     width: $percent-100;
     margin-top: 30px;
-    
-        .recent-projects-header {
-            height: 30px;
-            width: 190px;
-            background-color: $dark-grey;
-            color: $yellow;
-            margin-left: 15px;
-        }
 
         .recent-projects-images {
             display: flex;
@@ -288,10 +233,10 @@ aside {
                         max-width: 100%;
                     }
                 }
-        }
+            }
 }
-.bottom-block {
 
+.bottom-block {
     @include flex-row;
     width: $percent-100;
     background: $dark-grey;
@@ -314,14 +259,13 @@ aside {
             color: white;
             border: none;
             box-shadow: 0 2px $yellow;
+            cursor: pointer;
         }
 
         .photo-stream {
-            
             .photo-stream-gallery {
                 @include flex-row;
                 flex-wrap: wrap;
-
                     img {
                         padding: 3px;
                     }
@@ -401,7 +345,8 @@ aside {
            caret-color: white;
         }
 }
-@media only screen and (max-width: 1080px) {
+
+@media (max-width: 1080px) {
    
     .bottom-block {
         @include flex-column;
@@ -447,12 +392,12 @@ footer {
     width: $percent-100;
     height: 100px;
     align-items: center;
+    width: 100%;
 
         .copyright-text {
             color: white;
             margin-left: 40px;
             min-width: 414px;
-            
         }
 
         nav {
@@ -467,9 +412,6 @@ footer {
                     @include flex-row;
                     justify-content: space-around;
                     flex-basis: 600px;
-                
-                    
                 }
-            
         }
 }   

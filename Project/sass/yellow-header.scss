@@ -1,0 +1,12 @@
+.yellow-header {
+    height: 30px;
+    width: fit-content;
+    padding: 0 15px;
+    background-color: $dark-grey;
+    color: $yellow;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}

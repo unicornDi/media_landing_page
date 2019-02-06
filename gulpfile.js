@@ -38,7 +38,7 @@ gulp.task('reload', function() {
 })
 
 gulp.task('watch', ['sass', 'postcss', 'reload'], function() {
-    gulp.watch(pathToSass, ['sass', 'postcss']);
+    gulp.watch('project/sass/*.scss', ['sass', 'postcss']);
     gulp.watch('project/index.html', browserSync.reload)
 });
 
