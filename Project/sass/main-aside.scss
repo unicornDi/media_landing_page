@@ -1,0 +1,27 @@
+.main-aside {
+    width: $percent-30;
+    margin-right: auto;
+}
+
+.main-aside__section {
+    width: 85%;
+    margin-left: 35px;
+    min-width: 320px;
+    background: $dark-grey;
+}
+
+.aside-list {
+    list-style: none;
+    @include flex-column;
+    height: 100%;
+    background: $dark-grey;
+    padding-left: 20px;
+}
+.aside-header {
+    color: $yellow;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 0;
+    padding-top: 10px;
+}

@@ -1,12 +1,20 @@
 @import './var.scss';
 @import './nav.scss';
 @import './yellow-header.scss';
-@import './aside-header.scss';
+@import './footer.scss';
+@import './gallery.scss';
+@import './project-details.scss';
+@import './main-aside.scss';
+@import './popular-posts.scss';
+@import './tags.scss';
+@import './recent-projects.scss';
 
 body {
     margin: 0;
     background-color: $main-color;
     min-width: 500px;
+    overflow-x: hidden;
+    font-family: $roboto;
 }
 
 .main-container {
@@ -16,7 +24,7 @@ body {
 
 header {
     @include flex-row;
-    width: $percent-100;
+    // width: $percent-100;
     background: $main-color;
     height: 160px;
     align-items: center;
@@ -58,251 +66,38 @@ header {
     @include flex-column;
     flex-basis: $percent-70;
     
-        .gallery {
-            @include flex-row;
-            flex-wrap: wrap;
-            background: $dark-grey;
-            width: 100%;
-            margin-left: 15px;
-            align-items: center;
-            justify-content: center;
-
-                .gallery-img {
-                    height: 280px;
-                    width: 280px;
-                    padding: 10px;
-
-                .gallery-img:hover {
-                    transform: scale(1.5);
-                        }    
-                        img {
-                            width: 100%;
-                            transition: transform .5s;
-
-                        }
-                        img:hover {
-                            transform: scale(1.5);
-                            
-                        }
-                }   
-        }
-
         .project-description {
             width: 100%;
                 
                 .project-description-text {
                     margin-left: 15px;
                     display: flex;
-                    
+                    text-indent: 50px;
+                    letter-spacing: 2px;
                 }
         }
 }
 
-aside {
-    @include flex-column;
-    flex-basis: $percent-30;
-    margin-right: auto;
+// .recent-projects {
+//     @include flex-column;
+//     width: $percent-100;
+//     margin-top: 30px;
 
-        .project-details-block {
-            @include flex-column;
-            width: 80%;
-            height: 370px;
-            background: $dark-grey;
-            margin-left: 35px;
-            min-width: 320px;
+//         .recent-projects-images {
+//             display: flex;
+//             margin-top: 15px;
 
-                .project-details {
-                    @include flex-row;
-                    height: 80%;
-                    justify-content: space-around;
-                    margin: 0 5%;
-                    min-width: 231.52px;
-                    width: 100%;
+//                 .image-box {
+//                     width: 250px;
+//                     padding: 15px;
 
-                    .arrows {
-                    @include flex-column;
-                    justify-content: space-around;
-                    margin: 0 5px;
-
-
-                        .fa-angle-right {
-                            @include flex-row;
-                            justify-content: center;
-                            align-items: center;
-                            background: $yellow;
-                            width: 20px;
-                            height: 20px;
-                        }
-                    }  
-                    
-                    .project-details-text {
-                        @include flex-column;
-                        justify-content: space-around;
-                        margin-right: 35px;
-                        min-width: 231.52px;
-                    }
-                } 
-            }
-        }
-
-        .popular-posts-block {
-            @include flex-column;
-            width: 80%;
-            height: 420px;
-            background: $dark-grey;
-            margin-left: 35px;
-            margin-top: 30px;
-            min-width: 320px;
-
-            .popular-posts-container {
-                @include flex-column;
-                justify-content: space-around;
-                height: $percent-100;
-                
-                .popular-post {
-                    @include flex-row;
-                    height: $percent-100;
-                    justify-content: space-around;
-
-                        .popular-post-text {
-                            margin-left: 10px;
-                            flex-basis: 50%;
-                        }
-
-                        .popular-post-img {
-                            flex-basis: 90px;
-                            height: 60px;
-
-                                img {
-                                    width: $percent-100;
-                                }
-                        }
-                }
-            }
-    }
-
-        .tags-container {
-            width: $percent-80;
-            height: 130px;
-            background: $dark-grey;
-            margin-left: 35px;
-            margin-top: 30px;
-            min-width: 320px;
-
-            .tags-block {
-                @include flex-column;
-                width: 100%;
-                height: 70%;
-
-                .tags-row {
-                    @include flex-row;
-                    justify-content: space-around;
-                    margin-top: 5px;
-                }
-
-                .tags-third-row {
-                    @include flex-row;
-                    margin-top: 5px;
-                    width: 220px;
-                    justify-content: space-around;
-                }
-                    
-                .tag {
-                    background: $yellow;
-                    font-size: 15px;
-                
-                }
-        }    
-    }
-
-
-.recent-projects {
-    @include flex-column;
-    width: $percent-100;
-    margin-top: 30px;
-
-        .recent-projects-images {
-            display: flex;
-            margin-top: 15px;
-
-                .image-box {
-                    width: 250px;
-                    padding: 15px;
-
-                    img {
-                        max-width: 100%;
-                    }
-                }
-            }
-}
-
-.bottom-block {
-    @include flex-row;
-    width: $percent-100;
-    background: $dark-grey;
-    margin-top: 50px;
-    min-width: 1010px;
-    justify-content: space-around;
-
-        .about-us {
-            @include flex-column;
-            color: white;
-            flex-basis: 420px;
-            padding-left: 30px;
-
-        button {
-            margin-top: 20px;
-            width: 100px; 
-            min-height: 33px;
-            height: 40px;
-            background: black;
-            color: white;
-            border: none;
-            box-shadow: 0 2px $yellow;
-            cursor: pointer;
-        }
-
-        .photo-stream {
-            .photo-stream-gallery {
-                @include flex-row;
-                flex-wrap: wrap;
-                    img {
-                        padding: 3px;
-                    }
-            }
-        }
-    } 
-
-        .tweets-block { 
-            font-size: 13px;
-            margin-left: 40px;
-        
-
-            .latest-tweets {
-                @include flex-row;
-                height: 80%;
+//                     img {
+//                         max-width: 100%;
+//                     }
+//                 }
+//             }
+// }
             
-                
-                    .tweets {
-                        @include flex-column;
-                        justify-content: space-around;
-                        align-items: center;
-
-                        .fab {
-                            color: white;
-                        }
-                    }
-
-                    .tweets-text {
-                        @include flex-column;
-                        justify-content: space-around;
-                        color: white;
-                        margin-left: 20px;
-                        line-height: 20px;
-                        
-                    }
-            }
-
             .social-connecting {
                 @include flex-row;
                 margin-top: 10px;
@@ -312,7 +107,7 @@ aside {
                         margin-left: 10px;
                     }
         }
-    }
+    
 
     .contact-info-block {
         @include flex-column;
@@ -344,7 +139,7 @@ aside {
            outline: none;
            caret-color: white;
         }
-}
+
 
 @media (max-width: 1080px) {
    
@@ -386,32 +181,26 @@ aside {
     }
 }
 
-footer {
-    @include flex-row;
-    background: black;
-    width: $percent-100;
-    height: 100px;
-    align-items: center;
-    width: 100%;
+// footer {
+//     @include flex-row;
+//     background: black;
+//     width: $percent-100;
+//     height: 100px;
+//     align-items: center;
+//     width: 100%;
 
-        .copyright-text {
-            color: white;
-            margin-left: 40px;
-            min-width: 414px;
-        }
+//         .copyright-text {
+//             color: white;
+//             margin-left: 40px;
+//             min-width: 414px;
+//         }
 
-        nav {
-            @include flex-row;
-            color: white;
-            justify-content: flex-end;
-            width: 800px;
-            margin-left: 20px;
-            min-width: 428px;
-
-                div {
-                    @include flex-row;
-                    justify-content: space-around;
-                    flex-basis: 600px;
-                }
-        }
-}   
+//         nav {
+//             @include flex-row;
+//             color: white;
+//             justify-content: flex-end;
+//             width: 800px;
+//             margin-left: 20px;
+//             min-width: 428px;
+//         }
+// }   

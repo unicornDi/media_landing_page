@@ -1,0 +1,20 @@
+.project-details__item {
+    @include flex-row;
+    align-items: center;
+    height: 50px;
+    
+    .project-detail__item-text {
+        color: white;
+        text-transform: capitalize;
+    }
+
+    .fa-angle-right {
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        background: $yellow;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+}

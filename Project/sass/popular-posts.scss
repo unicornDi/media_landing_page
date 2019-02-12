@@ -1,0 +1,25 @@
+.popular-posts {
+    margin-top: 30px;
+    
+        .popular-posts__item {
+            @include flex-row;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 15px;
+
+            .popular-posts__img {
+                flex-basis: 90px;
+                height: 60px;
+
+                    img {
+                        width: $percent-100;
+                    }
+            }
+
+            .popular-posts__text {
+                margin-left: 10px;
+                width: 50%;
+                color: white;
+            }
+        }
+}
