@@ -16,8 +16,8 @@
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
         crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" 
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
 
 </head>
 
@@ -37,9 +37,9 @@
         </header>
 
         <div class="header_banner">
-            <div class="project-button">
-                <p>PROJECT</p>
-            </div>
+            <span class="project-name">
+                Project
+            </span>
         </div>
         
         <main class="main-block">
@@ -181,8 +181,8 @@
         <footer class="main-footer">
             <div class="main-footer__top">
                 <section class="footer__about-us">
-                    <h4>About Us</h4>
-                    <div class="about-us__text">
+                    <h4 class="footer-header">About Us</h4>
+                    <p class="about-us__text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.</br>
                         Nam sit amet augue elit. Donec elementum vitae neque et ultrices.</br> 
                         Aliquam dictum dui nec nisl iaculis elementum.</br>
@@ -190,10 +190,10 @@
                         Donec ex ligula, mollis quis justo nec, viverra molestie ipsum.</br>
                         Morbi viverra placerat ante non tempus. </br>
                         Nulla sit amet felis iaculis tortor tempus dictum.</br>
-                    </div>
+                    </p>
                     <button class="about-us__button" type="button">Learn more</button>
                     <div class="about-us__photo-stream">
-                        <h4>Photo Stream</h4>
+                        <h4 class="footer-header">Photo Stream</h4>
                         <div class="photo-stream__gallery">
                             <img src="images/photo_stream/img_1.png">
                             <img src="images/photo_stream/img_2.png">
@@ -203,87 +203,99 @@
                             <img src="images/photo_stream/img_6.png">
                         </div>
                     </div>
-            </section>
-            <section class="footer__tweets">
-                <h4>Latest Tweets</h4>
-                <div class="latest-tweets">
-                    <div class="tweets">
-                        <i class="fab fa-twitter fa-lg"></i>
-                        <i class="fab fa-twitter fa-lg"></i>
-                        <i class="fab fa-twitter fa-lg"></i>
-                        <i class="fab fa-twitter fa-lg"></i>
-                        <i class="fab fa-twitter fa-lg"></i>
+                </section>
+                <section class="social__networks">
+                    <h4 class="footer-header">Latest Tweets</h4>
+                    <ul class="tweets__list">
+                        <li class="tweets__list-item tweets-item">
+                            <i class="fab fa-twitter fa-lg"></i>
+                            <span class="tweets-item__text">Check Out Dtbaker's @Arduino Sales Notification #System</br> 
+                                http:/t.co/WBFKIWHJ</span>
+                        </li>
+                        <li class="tweets__list-item">
+                            <i class="fab fa-twitter fa-lg"></i>
+                            <span class="tweets-item__text">Check Out Dtbaker's @Arduino Sales Notification #System</br> 
+                                http:/t.co/WBFKIWHJ</span>
+                        </li>
+                        <li class="tweets__list-item">
+                            <i class="fab fa-twitter fa-lg"></i>
+                            <span class="tweets-item__text">Check Out Dtbaker's @Arduino Sales Notification #System</br> 
+                                http:/t.co/WBFKIWHJ</span>
+                        </li>
+                        <li class="tweets__list-item">
+                            <i class="fab fa-twitter fa-lg"></i>
+                            <span class="tweets-item__text">Check Out Dtbaker's @Arduino Sales Notification #System</br> 
+                                http:/t.co/WBFKIWHJ</span>
+                        </li>
+                        <li class="tweets__list-item">
+                            <i class="fab fa-twitter fa-lg"></i>
+                            <span class="tweets-item__text">Check Out Dtbaker's @Arduino Sales Notification #System</br> 
+                                http:/t.co/WBFKIWHJ</span>
+                        </li>
+                    </ul>
+                
+                <section class="social-connecting">
+                        <h4 class="footer-header footer-header--no-margin">Social connecting</h4>
+                        <div class="social-connecting__icons">
+                            <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fab fa-google-plus-square fa-lg"></i></a>
+                            <a href="https://tumblr.com/" target="_blank"><i class="fab fa-tumblr-square fa-lg"></i></a>
+                            <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                            <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube-square fa-lg"></i></a>
+                            <a href="https://blogger.com/" target="_blank"><i class="fab fa-blogger fa-lg"></i></a>
+                            <a href="https://rss.com/" target="_blank"><i class="fas fa-rss-square fa-lg"></i></a>
+                            <a href="https://dribble.com/" target="_blank"><i class="fab fa-dribbble-square fa-lg"></i></a>
+                        </div>
+                    </section>
+                </section> 
+    
+                <section class="contact-info">
+                    <h4 class="footer-header">Contact info</h4>
+                    <div class="contact-info__wrapper">
+                        <ul class="contact-info__list">
+                            <li class="contact-info__list-item">
+                                <i class="contact-info__icon fas fa-map-marker-alt fa-lg"></i>
+                                <address>Address: 12569 Saint Patrick des Prés,  85000 Paris, France</address>
+                            </li>
+                            <li class="contact-info__list-item">
+                                <i class="contact-info__icon fab fa-whatsapp-square fa-lg"></i>
+                                <span class="contact-info__text">Phone: <a href="tel:045 845-45-79">045 845-45-79</a></br>
+                                    <a href="tel:045 845-45-78">045 845-45-78</a></br></span>
+                            </li>
+                            <li class="contact-info__list-item">
+                                <i class="contact-info__icon fas fa-envelope-square fa-lg"></i>
+                                <span class="contact-info__text">E-mail: 
+                                    <a href="mailto:freeforwebdesign@gmail.com">freeforwebdesign@gmail.com</a>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
-                <div class="tweets-text">
-                        <span>Check Out Dtbaker's @Arduino Sales Notification #System</br> 
-                        http:/t.co/WBFKIWHJ</span>
-                        <span>Check Out Dtbaker's @Arduino Sales Notification #System</br> 
-                        http:/t.co/WBFKIWHJ</span>
-                        <span>Check Out Dtbaker's @Arduino Sales Notification #System</br> 
-                        http:/t.co/WBFKIWHJ</span>   
-                        <span>Check Out Dtbaker's @Arduino Sales Notification #System</br> 
-                        http:/t.co/WBFKIWHJ</span> 
-                        <span>Check Out Dtbaker's @Arduino Sales Notification #System</br> 
-                        http:/t.co/WBFKIWHJ</span>  
-                </div>
-            </div>
 
-            <div class="social-connecting">
-                    <h4>Social connecting</h4>
-                    <div class="soc-net-icons">
-                        <i class="fab fa-facebook fa-lg"></i>
-                        <i class="fab fa-google-plus-square fa-lg"></i>
-                        <i class="fab fa-tumblr-square fa-lg"></i>
-                        <i class="fab fa-linkedin fa-lg"></i>
-                        <i class="fab fa-youtube-square fa-lg"></i>
-                        <i class="fab fa-blogger fa-lg"></i>
-                        <i class="fas fa-rss-square fa-lg"></i>
-                        <i class="fab fa-dribbble-square fa-lg"></i>
-                    </div>
-                </div>
-        </section> 
-   
-        <section class="contact-info-block">
-            <div class="contact-info">
-                <h4>Contact info</h4>
-                <div class="contact-info-icons">
-                    <i class="fas fa-map-marker-alt fa-lg"></i>
-                    <i class="fab fa-whatsapp-square fa-lg"></i>
-                    <i class="fas fa-envelope-square fa-lg"></i>
-                </div> 
-                    <div class="contact-info-text">
-                        <div>Address: 12569 Saint Patrick des Prés,  85000 Paris, France</div>
-                        <div>Phone: +38 045 845-45-79</br>
-                               +38 045 845-45-78</br></div>
-                        <div>E-mail: freeforwebdesign@gmail.com</div>
-                    </div>
-                </div>
-
-                <div class="follow-us">
-                    <h4>Follow Us</h4>
-                    <span>Lorem Ipsum is simply dummy text of the printing and typesettig industry.</span>
-                    <form>
+                    <div class="follow-us">
+                        <h4 class="footer-header">Follow Us</h4>
+                        <span>Lorem Ipsum is simply dummy text of the printing and typesettig industry.</span>
                         <form>
                             <input type="email" name="email_address">
                             <i class="far fa-envelope"></i>
                         </form>
-                    </form>
-                </div>
-            </section>
+                    </div>
+                </section>
         </div>
-        <!-- <div class="copyright-text">
-            <span>Copyright 2013 - FreeForWebDesign.com - All Rights Reserved</span>
-        </div>
-        <nav class="navigation footer-nav">
-           <ul class="navigation-list footer-nav__list">
-                <li class="footer-nav__list-item"><a href="#">home</a></li>
-                <li class="footer-nav__list-item"><a href="#">portfolio</a></li>
-                <li class="footer-nav__list-item"><a href="#">blog</a></li>
-                <li class="footer-nav__list-item"><a href="#">about us</a></li>
-                <li class="footer-nav__list-item"><a href="#">contact</a></li>
-           </ul>
-        </nav> -->
+        <section class="main-footer__bottom">
+            <span class="copyright-text">
+                Copyright 2013 - <a href="https://freeforwebdesign.com" target="_blank">FreeForWebDesign.com</a> - All Rights Reserved
+            </span>
+            <nav class="navigation footer-nav">
+                <ul class="navigation-list footer-nav__list">
+                    <li class="footer-nav__list-item"><a href="#">home</a></li>
+                    <li class="footer-nav__list-item"><a href="#">portfolio</a></li>
+                    <li class="footer-nav__list-item"><a href="#">blog</a></li>
+                    <li class="footer-nav__list-item"><a href="#">about us</a></li>
+                    <li class="footer-nav__list-item"><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </section>
     </footer>
-    </div>
+</div>
 </body>
 </html>

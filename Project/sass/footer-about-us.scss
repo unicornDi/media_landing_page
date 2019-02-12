@@ -1,0 +1,33 @@
+.footer__about-us {
+    @include flex-column;
+    width: 420px;
+    padding-left: 30px;
+
+        .about-us__text {
+            color: white;
+        }
+}
+
+.about-us__button {
+    margin-top: 20px;
+    width: 100px; 
+    min-height: 33px;
+    height: 40px;
+    background: black;
+    color: white;
+    border: none;
+    box-shadow: 0 2px $yellow;
+    cursor: pointer;
+}
+
+.about-us__photo-stream {
+    .photo-stream__gallery {
+        @include flex-row;
+        flex-wrap: wrap;
+            
+        img {
+            padding: 3px;
+        }
+    }
+}
+ 

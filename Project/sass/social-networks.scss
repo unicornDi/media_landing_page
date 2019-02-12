@@ -1,0 +1,38 @@
+.social__networks { 
+    @include flex-column;
+    margin-left: 40px;
+    width: 350px;
+    
+    .tweets__list {
+        @include flex-column;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        width: 400px;
+        margin-top: -3px;
+
+            .tweets__list-item {
+                @include flex-row;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+                margin-bottom: 15px;
+
+                .tweets-item__text {
+                    padding-left: 15px;
+                }
+            }
+    }
+    .social-connecting {
+        @include flex-row;
+        margin-top: 10px;
+        
+        .social-connecting__icons {
+            margin-left: 10px;
+            
+            i {
+                color: $yellow;
+            }
+        }
+    }
+}
